@@ -46,8 +46,8 @@ class MyApp extends StatelessWidget {
               },
               body: TabBarView(
                 children: <Widget>[
-                  camera_pages(),
-                  Icon(Icons.directions_transit, size: 350),
+                  camera_page(),
+                  chat_page(),
                   Icon(Icons.directions_car, size: 350),
                   Icon(Icons.directions_bike, size: 350),
                 ],
@@ -60,8 +60,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class camera_pages extends StatelessWidget {
-  const camera_pages({Key? key}) : super(key: key);
+class camera_page extends StatelessWidget {
+  const camera_page({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +70,39 @@ class camera_pages extends StatelessWidget {
         child: Container(
           color: Colors.black,
         ),
+      ),
+    );
+  }
+}
+
+class chat_page extends StatelessWidget {
+  const chat_page({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: NetworkImage(
+                          "https://cdn.vox-cdn.com/thumbor/ZmCGGjS0zJgCe7l-2hHOpIDP6ag=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/67419919/nstatt_170418_1624_0052.0.0.jpg"),
+                    )),
+              )
+            ],
+          ),
+        ],
       ),
     );
   }
