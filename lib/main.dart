@@ -81,28 +81,18 @@ class chat_page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                width: 60,
-                height: 60,
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      fit: BoxFit.fill,
-                      image: NetworkImage(
-                          "https://cdn.vox-cdn.com/thumbor/ZmCGGjS0zJgCe7l-2hHOpIDP6ag=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/67419919/nstatt_170418_1624_0052.0.0.jpg"),
-                    )),
-              )
-            ],
+      body: Container(
+        width: 50,
+        height: 50,
+                      margin: EdgeInsets.all(12.0),  
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            image: NetworkImage(
+                "https://cdn.vox-cdn.com/thumbor/ZmCGGjS0zJgCe7l-2hHOpIDP6ag=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/67419919/nstatt_170418_1624_0052.0.0.jpg"),
           ),
-        ],
+        ),
       ),
     );
   }
